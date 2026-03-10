@@ -67,6 +67,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
+       Auth State Checker
+       ========================================================================== */
+    const checkAuthStatusOnHome = () => {
+        const token = localStorage.getItem('velvet_token');
+        const orderBtns = document.querySelectorAll('a[href="login.html"]');
+
+        if (token) {
+            orderBtns.forEach(btn => {
+                btn.href = 'dashboard.html';
+                btn.textContent = 'Dashboard';
+            });
+        }
+    };
+    checkAuthStatusOnHome();
+
+    /* ==========================================================================
        Mobile Menu Toggle (Placeholder logic)
        ========================================================================== */
     const hamburger = document.getElementById('hamburger');

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Roast | Access Portal</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-page">
+
+    <!-- Navbar Minimal -->
+    <header class="header sticky" id="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-mug-hot"></i> Velvet Roast
+            </a>
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-outline">Back to Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-container fade-up visible">
+            <div class="auth-card tilt-card">
+                <div class="card-inner">
+                    <!-- Toggle Buttons -->
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" id="tab-login">Sign In</button>
+                        <button class="auth-tab" id="tab-register">Create Account</button>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="form-login" class="auth-form active">
+                        <h2 class="auth-title">Welcome Back</h2>
+                        <div class="form-group">
+                            <i class="fa-solid fa-envelope form-icon"></i>
+                            <input type="email" id="login-email" class="form-input" placeholder="Email Address"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-solid fa-lock form-icon"></i>
+                            <input type="password" id="login-password" class="form-input" placeholder="Password"
+                                required>
+                        </div>
+                        <div id="login-error" class="error-msg"></div>
+                        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                    </form>
+
+                    <!-- Register Form -->
+                    <form id="form-register" class="auth-form">
+                        <h2 class="auth-title">Join Velvet Roast</h2>
+                        <div class="form-group">
+                            <i class="fa-solid fa-user form-icon"></i>
+                            <input type="text" id="reg-name" class="form-input" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-solid fa-envelope form-icon"></i>
+                            <input type="email" id="reg-email" class="form-input" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-solid fa-lock form-icon"></i>
+                            <input type="password" id="reg-password" class="form-input" placeholder="Password" required>
+                        </div>
+                        <div id="reg-error" class="error-msg"></div>
+                        <button type="submit" class="btn btn-outline w-100">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

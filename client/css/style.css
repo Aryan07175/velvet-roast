@@ -1391,3 +1391,136 @@ body.cursor-active .cursor-outline {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================================================================
+   Auth / Login Page
+   ========================================================================== */
+.auth-page {
+    background: linear-gradient(135deg, var(--color-bg-dark), #1a120c);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-header {
+    background: transparent;
+    border: none;
+}
+
+.auth-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 40px;
+    perspective: 1200px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-card {
+    background-color: var(--color-bg-light);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+}
+
+.auth-card .card-inner {
+    padding: 40px;
+    background: none;
+    border: none;
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-tab {
+    flex: 1;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    padding: 15px 0;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    transition: var(--transition-fast);
+    position: relative;
+}
+
+.auth-tab.active {
+    color: var(--color-primary);
+}
+
+.auth-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.auth-form {
+    display: none;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-title {
+    font-size: 2rem;
+    color: var(--color-text-main);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.auth-form .form-group {
+    position: relative;
+}
+
+.auth-form .form-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    opacity: 0.7;
+}
+
+.auth-form .form-input {
+    padding-left: 50px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.error-msg {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-align: center;
+    min-height: 20px;
+}
