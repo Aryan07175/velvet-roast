@@ -1,0 +1,9 @@
+{
+  "name": "velvet-roast",
+  "version": "1.0.0",
+  "description": "Velvet Roast Deployment configuration",
+  "scripts": {
+    "start": "cd server && npm start",
+    "install": "cd server && npm install"
+  }
+}

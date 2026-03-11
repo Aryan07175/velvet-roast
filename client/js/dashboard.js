@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const user = JSON.parse(userStr);
     document.getElementById('user-name').textContent = user.name;
 
-    const API_URL = 'http://localhost:5000/api';
+    const DOMAIN_URL = window.location.origin;
+    const API_URL = `${DOMAIN_URL}/api`;
 
     // Logout
     document.getElementById('btn-logout').addEventListener('click', () => {

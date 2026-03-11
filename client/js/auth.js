@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // API Handling
-    const API_URL = 'http://localhost:5000/api';
+    const DOMAIN_URL = window.location.origin;
+    const API_URL = `${DOMAIN_URL}/api`;
 
     // Form Submits
     if (formRegister) {
