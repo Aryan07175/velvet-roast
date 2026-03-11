@@ -28,7 +28,12 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', message: 'Velvet Roast API is running!' });
 });
 
-// Start Server
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+// Start Server (Only if not running in Serverless environment)
+if (process.env.NODE_ENV !== 'production' || process.env.RENDER) {
+    app.listen(PORT, '0.0.0.0', () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+    });
+}
+
+// Export for serverless
+module.exports = app;
